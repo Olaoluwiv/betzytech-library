@@ -1,0 +1,26 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: betzytech-library-backend:compose
+    ports:
+      - "8100:8000"
+    environment:
+      - DATABASE_PATH=/data/betzytech.db
+    volumes:
+      - betzytech-library-data:/data
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    image: betzytech-library-frontend:compose
+    ports:
+      - "8084:80"
+    restart: unless-stopped
+
+volumes:
+  betzytech-library-data:
+    external: true
