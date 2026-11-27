@@ -122,7 +122,7 @@ def get_book(book_id: int, db: Session = Depends(get_db)):
 
     return book
 
-@app.post("/api/books")
+@app.post("/api/books", status_code=201)
 def add_book(book: Book, db: Session = Depends(get_db)):
     new_book = models.BookDB(
         title=book.title,
