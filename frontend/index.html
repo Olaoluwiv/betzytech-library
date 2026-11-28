@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BetzyTech Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>BetzyTech Library</h1>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#books">Books</a>
+        <a href="#about">About</a>
+    </nav>
+</header>
+<section id="about">
+    <h2>Welcome to BetzyTech Library</h2>
+
+    <p>
+        Discover, explore, and manage your favourite books
+        in one convenient digital library.
+    </p>
+
+    <p>
+        Browse our collection and find your next great read.
+    </p>
+</section>
+<section id="search">
+    <h2>Find a Book</h2>
+
+    <input
+        type="text"
+        id="search-input"
+        placeholder="Search by book title or author..."
+    >
+
+    <button id="search-button">Search</button>
+</section>
+<section id="books">
+    <h2>Books Dashboard</h2>
+    
+
+    <!-- Book Collection -->
+    <section id="book-collection">
+        <h2>Our Book Collection</h2>
+        <div id="book-list"></div>
+    </section>
+
+    <!-- Add Book -->
+    <section id="add-book">
+        <h2>Add a New Book</h2>
+
+        <form id="add-book-form">
+            <input type="text" id="book-title" placeholder="Book Title" required>
+            <input type="text" id="book-author" placeholder="Author" required>
+            <input type="text" id="book-category" placeholder="Category" required>
+
+            <button type="submit">Add Book</button>
+        </form>
+    </section>
+
+    <!-- Edit Book -->
+    <section id="edit-book">
+        <h2>Edit a Book</h2>
+
+        <form id="edit-book-form">
+            <input type="number" id="edit-book-id" placeholder="Book ID" required>
+            <input type="text" id="edit-book-title" placeholder="New Book Title" required>
+            <input type="text" id="edit-book-author" placeholder="New Author" required>
+            <input type="text" id="edit-book-category" placeholder="New Category" required>
+
+            <button type="submit">Update Book</button>
+        </form>
+    </section>
+
+    <!-- Delete Book -->
+    <section id="delete-book">
+        <h2>Delete a Book</h2>
+
+        <form id="delete-book-form">
+            <input type="number" id="delete-book-id" placeholder="Enter Book ID" required>
+
+            <button type="submit">Delete Book</button>
+        </form>
+    </section>
+</section>
+<footer>
+    <p>&copy; 2026 BetzyTech Library. All rights reserved.</p>
+</footer>
+<script src="app.js"></script>
+
+</body>
+</html>
